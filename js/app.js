@@ -22,7 +22,7 @@ Enemy.prototype.update = function(dt) {
 
     this.x += dt*this.speed;
 
-    if(this.x > 505){
+    if(this.x > 707){
         this.y=this.y=this.yValues[Math.floor(Math.random() * this.yValues.length)]*83-41.5;
         this.speed = Math.random() * (270 - 90) + 90;
         this.x=0;
@@ -60,7 +60,7 @@ Player.prototype.handleInput=function(key){
         this.update(-101,0);
     }
 
-    if(key==='right' && this.x<404){
+    if(key==='right' && this.x<606){
         this.update(101,0);
     }
 
