@@ -74,6 +74,11 @@ Player.prototype.handleInput=function(key){
         this.update(0,83);
     }
 }
+
+Player.prototype.lose= function (){
+    this.x=303;
+    this.y=622.5;
+}
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
