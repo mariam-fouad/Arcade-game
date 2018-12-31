@@ -39,8 +39,9 @@ var Player = function (){
 
 }
 
-Player.prototype.update=function(){
-
+Player.prototype.update=function(x=0,y=0){
+    this.x+=x;
+    this.y+=y;
 }
 
 Player.prototype.render=function(){
@@ -49,19 +50,19 @@ Player.prototype.render=function(){
 
 Player.prototype.handleInput=function(key){
     if(key==='left' && this.x>0){
-        this.x-=101;
+        this.update(-101,0);
     }
 
     if(key==='right' && this.x<404){
-        this.x+=101;
+        this.update(101,0);
     }
 
     if(key==='up' && this.y>-41.5){
-        this.y-=83;
+        this.update(0,-83);
     }
 
     if(key==='down' && this.y<373.5){
-        this.y+=83;
+        this.update(0,83);
     }
 }
 // Now instantiate your objects.
