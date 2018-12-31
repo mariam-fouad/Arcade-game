@@ -7,10 +7,9 @@ var Enemy = function() {
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
 
-    this.x=0;
+    
     this.enemyRows = [1,2,4,5,6];
-    this.y=this.enemyRows[Math.floor(Math.random() * this.enemyRows.length)]*83-41.4;
-    this.speed = Math.random() * (270 - 90) + 90;
+    this.randomize();
 };
 
 // Update the enemy's position, required method for game
@@ -23,9 +22,7 @@ Enemy.prototype.update = function(dt) {
     this.x += dt*this.speed;
 
     if(this.x > 707){
-        this.y=this.y=this.enemyRows[Math.floor(Math.random() * this.enemyRows.length)]*83-41.5;
-        this.speed = Math.random() * (270 - 90) + 90;
-        this.x=0;
+        this.randomize();
     }
 };
 
@@ -34,7 +31,12 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-
+//randomize the enemy property 
+Enemy.prototype.randomize= function (){
+    this.y=this.y=this.enemyRows[Math.floor(Math.random() * this.enemyRows.length)]*83-41.5;
+    this.speed = Math.random() * (270 - 90) + 90;
+    this.x=0;
+}
 
 // Now write your own player class
 // This class requires an update(), render() and
