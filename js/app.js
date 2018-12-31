@@ -10,7 +10,7 @@ var Enemy = function() {
     this.x=0;
     this.yValues = [1,2,3];
     this.y=this.yValues[Math.floor(Math.random() * this.yValues.length)]*83-41.4;
-    this.speed = Math.random() * (300 - 70) + 70;
+    this.speed = Math.random() * (270 - 90) + 90;
 };
 
 // Update the enemy's position, required method for game
@@ -24,7 +24,7 @@ Enemy.prototype.update = function(dt) {
 
     if(this.x > 505){
         this.y=this.y=this.yValues[Math.floor(Math.random() * this.yValues.length)]*83-41.5;
-        this.speed = Math.random() * (300 - 70) + 70;
+        this.speed = Math.random() * (270 - 90) + 90;
         this.x=0;
     }
 };
