@@ -79,7 +79,7 @@ Player.prototype.handleInput=function(key){
 
 const allEnemies = [];
 
-for (let i =0;i<3;i++){
+for (let i =0;i<4;i++){
     allEnemies.push(new Enemy());
 }
 const player = new Player();
