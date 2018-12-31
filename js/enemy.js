@@ -23,8 +23,12 @@
 
 class Enemy {
     sprite = 'images/enemy-bug.png';
-    update = (dt)=>{
+    x=0;
+    y=83+83;
+    speed = Math.random(); 
 
+    update = (dt)=>{
+        x = dt*speed;
     }
     render=()=>{
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
