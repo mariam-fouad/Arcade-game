@@ -8,8 +8,8 @@ var Enemy = function() {
     this.sprite = 'images/enemy-bug.png';
 
     this.x=0;
-    this.yValues = [1,2,3];
-    this.y=this.yValues[Math.floor(Math.random() * this.yValues.length)]*83-41.4;
+    this.enemyRows = [1,2,4,5,6];
+    this.y=this.enemyRows[Math.floor(Math.random() * this.enemyRows.length)]*83-41.4;
     this.speed = Math.random() * (270 - 90) + 90;
 };
 
@@ -23,7 +23,7 @@ Enemy.prototype.update = function(dt) {
     this.x += dt*this.speed;
 
     if(this.x > 707){
-        this.y=this.y=this.yValues[Math.floor(Math.random() * this.yValues.length)]*83-41.5;
+        this.y=this.y=this.enemyRows[Math.floor(Math.random() * this.enemyRows.length)]*83-41.5;
         this.speed = Math.random() * (270 - 90) + 90;
         this.x=0;
     }
@@ -79,7 +79,7 @@ Player.prototype.handleInput=function(key){
 
 const allEnemies = [];
 
-for (let i =0;i<4;i++){
+for (let i =0;i<7;i++){
     allEnemies.push(new Enemy());
 }
 const player = new Player();
