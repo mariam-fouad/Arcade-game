@@ -9,7 +9,7 @@ var Enemy = function() {
 
     this.x=0;
     this.y=83+83;
-    this.speed = Math.random(); 
+    this.speed = Math.random() * (300 - 70) + 70;
 };
 
 // Update the enemy's position, required method for game
@@ -19,7 +19,7 @@ Enemy.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
 
-    x = dt*this.speed;
+    this.x += dt*this.speed;
 };
 
 // Draw the enemy on the screen, required method for game
