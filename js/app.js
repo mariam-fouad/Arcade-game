@@ -8,7 +8,8 @@ var Enemy = function() {
     this.sprite = 'images/enemy-bug.png';
 
     this.x=0;
-    this.y=83+83;
+    this.yValues = [1,2,3];
+    this.y=this.yValues[Math.floor(Math.random() * this.yValues.length)]*83-41.4;
     this.speed = Math.random() * (300 - 70) + 70;
 };
 
@@ -20,6 +21,12 @@ Enemy.prototype.update = function(dt) {
     // all computers.
 
     this.x += dt*this.speed;
+
+    if(this.x > 505){
+        this.y=this.y=this.yValues[Math.floor(Math.random() * this.yValues.length)]*83-41.5;
+        this.speed = Math.random() * (300 - 70) + 70;
+        this.x=0;
+    }
 };
 
 // Draw the enemy on the screen, required method for game
@@ -69,7 +76,12 @@ Player.prototype.handleInput=function(key){
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
-const allEnemies = [new Enemy() , new Enemy()];
+
+const allEnemies = [];
+
+for (let i =0;i<3;i++){
+    allEnemies.push(new Enemy());
+}
 const player = new Player();
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
