@@ -22,10 +22,12 @@
 // };
 
 class Enemy {
-    sprite = 'images/enemy-bug.png';
-    x=0;
-    y=83+83;
-    speed = Math.random(); 
+    constructor (){
+        this.sprite = 'images/enemy-bug.png';
+        this.x=0;
+        this.y=83+83;
+        this.speed = Math.random(); 
+    }
 
     update = (dt)=>{
         x = dt*speed;
