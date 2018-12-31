@@ -41,8 +41,8 @@ Enemy.prototype.render = function() {
 // a handleInput() method.
 var Player = function (){
     this.sprite = 'images/char-horn-girl.png';
-    this.x=202;
-    this.y=373.5;
+    this.x=303;
+    this.y=622.5;
 
 }
 
@@ -68,7 +68,7 @@ Player.prototype.handleInput=function(key){
         this.update(0,-83);
     }
 
-    if(key==='down' && this.y<373.5){
+    if(key==='down' && this.y<622.5){
         this.update(0,83);
     }
 }
