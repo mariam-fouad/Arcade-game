@@ -38,6 +38,34 @@ Enemy.prototype.randomize= function (){
     this.x=0;
 }
 
+// class Enemy {
+  
+//     constructor (){
+//         this.enemyRows = [1,2,4,5,6];
+//         this.randomize();
+//     };
+//     randomize=()=>{
+//                   this.y=this.y=this.enemyRows[Math.floor(Math.random() * this.enemyRows.length)]*83-41.5;
+//         this.speed = Math.random() * (230 - 70) + 70;
+//         this.x=0;
+//     };
+//     render = () =>{
+//          ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+//      };
+//     update = (dt)=> {
+//         // You should multiply any movement by the dt parameter
+//         // which will ensure the game runs at the same speed for
+//         // all computers.
+            
+//         this.x += dt*this.speed;
+            
+//         if(this.x > 707){
+//             this.randomize();
+//         }
+//     };
+            
+// }
+
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
