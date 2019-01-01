@@ -33,7 +33,7 @@ Enemy.prototype.render = function() {
 
 //randomize the enemy property 
 Enemy.prototype.randomize= function (){
-    this.y=this.y=this.enemyRows[Math.floor(Math.random() * this.enemyRows.length)]*83-41.5;
+    this.y=this.y=this.enemyRows[Math.floor(Math.random() * this.enemyRows.length)]*83-20.75;
     this.speed = Math.random() * (230 - 70) + 70;
     this.x=0;
 }
