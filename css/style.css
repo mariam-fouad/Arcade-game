@@ -3,7 +3,17 @@ body {
     background-color: #f1e8d8;
 }
 
+
 h1{
     color: #254156;
     font-family: fantasy;
+}
+
+
+.backdrop{
+    position: fixed;
+    background-color: #eae7e7b8;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
 }
