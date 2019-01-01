@@ -167,6 +167,9 @@ var Engine = (function(global) {
             enemy.render();
         });
 
+        rocks.forEach(function(rock){
+            rock.render();
+        });
         player.render();
     }
 
@@ -188,7 +191,8 @@ var Engine = (function(global) {
         'images/grass-block.png',
         'images/enemy-bug.png',
         'images/char-boy.png',
-        'images/char-horn-girl.png'
+        'images/char-horn-girl.png',
+        'images/Rock.png'
     ]);
     Resources.onReady(init);
 

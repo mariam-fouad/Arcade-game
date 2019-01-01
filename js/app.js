@@ -115,11 +115,26 @@ Player.prototype.win = function (){
         document.querySelector('.backdrop').style.display="block";
     }
 }
+
+var Rock = function (x,y){
+    this.x=x;
+    this.y=y;
+    this.sprite='images/Rock.png';
+}
+
+Rock.prototype.render=function(){
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+}
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
+const rocks = [];
 
+rocks.push(new Rock (103.75,222));
+rocks.push(new Rock (405,-31.5));
+rocks.push(new Rock (2,550));
+rocks.push(new Rock (500,550));
 const allEnemies = [];
 
 for (let i =0;i<7;i++){
