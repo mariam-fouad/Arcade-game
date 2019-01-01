@@ -71,9 +71,7 @@ Enemy.prototype.randomize= function (){
 // a handleInput() method.
 var Player = function (){
     this.sprite = 'images/char-horn-girl.png';
-    this.x=303;
-    this.y=622.5;
-
+    this.reset();
 }
 
 Player.prototype.update=function(x=0,y=0){
@@ -105,15 +103,16 @@ Player.prototype.handleInput=function(key){
 }
 
 Player.prototype.lose= function (){
+    this.reset();
+}
+
+Player.prototype.reset = function (){
     this.x=303;
     this.y=622.5;
 }
-
 Player.prototype.win = function (){
     if(this.y===-41.5){
         document.querySelector('.backdrop').style.display="block";
-        this.x=303;
-        this.y=622.5;
     }
 }
 // Now instantiate your objects.
@@ -142,4 +141,5 @@ document.addEventListener('keyup', function(e) {
 
 document.querySelector('.backdrop').addEventListener ("click",function(){
     document.querySelector('.backdrop').style.display="none";
+    player.reset();
 });
