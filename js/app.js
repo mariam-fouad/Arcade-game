@@ -96,6 +96,7 @@ Player.prototype.handleInput=function(key){
 
     if(key==='up' && this.y>-41.5){
         this.update(0,-83);
+        this.win();
     }
 
     if(key==='down' && this.y<622.5){
@@ -106,6 +107,14 @@ Player.prototype.handleInput=function(key){
 Player.prototype.lose= function (){
     this.x=303;
     this.y=622.5;
+}
+
+Player.prototype.win = function (){
+    if(this.y===-41.5){
+        document.querySelector('.backdrop').style.display="block";
+        this.x=303;
+        this.y=622.5;
+    }
 }
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
@@ -129,4 +138,8 @@ document.addEventListener('keyup', function(e) {
     };
 
     player.handleInput(allowedKeys[e.keyCode]);
+});
+
+document.querySelector('.backdrop').addEventListener ("click",function(){
+    document.querySelector('.backdrop').style.display="none";
 });
