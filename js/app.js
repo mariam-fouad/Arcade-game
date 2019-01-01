@@ -92,7 +92,7 @@ Player.prototype.handleInput=function(key){
         this.update(101,0);
     }
 
-    if(key==='up' && this.y>-41.5){
+    if(key==='up' && this.y>-20.75){
         this.update(0,-83);
         this.win();
     }
@@ -108,10 +108,10 @@ Player.prototype.lose= function (){
 
 Player.prototype.reset = function (){
     this.x=303;
-    this.y=622.5;
+    this.y=643.25;
 }
 Player.prototype.win = function (){
-    if(this.y===-41.5){
+    if(this.y===-20.75){
         document.querySelector('.backdrop').style.display="block";
     }
 }
