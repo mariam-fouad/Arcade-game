@@ -11,6 +11,7 @@ h1{
 
 
 .backdrop{
+    display: none;
     position: fixed;
     background-color: #eae7e7b8;
     top: 0;
