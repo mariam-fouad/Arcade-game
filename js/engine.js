@@ -87,7 +87,7 @@ var Engine = (function(global) {
     */
     function checkCollisions (){
         allEnemies.forEach(function(enemy) {
-            if((enemy.x-41.5<=player.x && enemy.x+41.5>=player.x)&& enemy.y===player.y)
+            if((enemy.x-50.5<=player.x && enemy.x+50.5>=player.x)&& enemy.y===player.y)
             {
                 player.lose();
             }
