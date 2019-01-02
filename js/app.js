@@ -75,8 +75,19 @@ var Player = function (){
 }
 
 Player.prototype.update=function(x=0,y=0){
-    this.x+=x;
-    this.y+=y;
+    let toUpdatePostion = true;
+    
+    rocks.forEach (rock=>{
+        if(rock.isOccupied(this.x+x , this.y+y)){
+            toUpdatePostion=false;
+        }
+    });
+
+    if(toUpdatePostion){
+        this.x+=x;
+        this.y+=y;
+    }
+    
 }
 
 Player.prototype.render=function(){
@@ -126,7 +137,7 @@ Rock.prototype.render=function(){
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
 
-Rock.prototype.isOccuped = function (x,y){
+Rock.prototype.isOccupied = function (x,y){
     if (this.x===x && this.y ===y){
         return true;
     }
