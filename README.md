@@ -10,4 +10,4 @@
 ## Game rules
 - Hitting a bug will result on reseting the player position
 - rocks block the way
-- you have to reack the blue sea to reach the win the game
+- you have to reach the blue sea to win the game
