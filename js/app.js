@@ -125,6 +125,13 @@ var Rock = function (x,y){
 Rock.prototype.render=function(){
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
+
+Rock.prototype.isOccuped = function (x,y){
+    if (this.x===x && this.y ===y){
+        return true;
+    }
+    return false;
+}
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
