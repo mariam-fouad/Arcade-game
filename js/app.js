@@ -131,10 +131,13 @@ Rock.prototype.render=function(){
 
 const rocks = [];
 
-rocks.push(new Rock (103.75,222));
-rocks.push(new Rock (405,-31.5));
-rocks.push(new Rock (2,550));
-rocks.push(new Rock (500,550));
+rocks.push(new Rock (101,228.25));
+rocks.push(new Rock (404,-20.75));
+rocks.push(new Rock (0,560.25));
+rocks.push(new Rock (505,560.25));
+rocks.push(new Rock (202,643.25));
+rocks.push(new Rock (606,228.25));
+rocks.push(new Rock(0,-20.75));
 const allEnemies = [];
 
 for (let i =0;i<7;i++){
